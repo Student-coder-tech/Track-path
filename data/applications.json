@@ -1,0 +1,741 @@
+[
+  {
+    "id": "app-1",
+    "company": "Stripe",
+    "role": "Frontend Engineer Intern",
+    "jobType": "Internship",
+    "workModel": "Hybrid",
+    "location": "San Francisco, CA",
+    "salaryRange": "$65/hr + $2,000/mo housing stipend",
+    "jobUrl": "https://stripe.com/jobs/intern-frontend",
+    "status": "Offer",
+    "appliedDate": "2026-08-14",
+    "deadline": "2026-10-05",
+    "deadlineType": "Offer Expiry",
+    "deadlineNotes": "Review sign-on bonus & team match preferences before accepting",
+    "deadlineCompleted": false,
+    "rating": 5,
+    "resumeVersion": "SWE_Frontend_v3.pdf",
+    "referralName": "Elena Rostova (Staff SWE)",
+    "tags": [
+      "Fintech",
+      "Top Choice",
+      "Referral"
+    ],
+    "source": "Referral",
+    "contacts": [
+      {
+        "id": "c-1",
+        "name": "Marcus Vance",
+        "role": "University Talent Partner",
+        "email": "marcus.v@stripe.com",
+        "linkedin": "https://linkedin.com/in/marcus-vance-recruiter"
+      }
+    ],
+    "interviews": [
+      {
+        "id": "int-1-1",
+        "roundName": "Technical Screening",
+        "scheduledDate": "2026-08-25T14:00:00Z",
+        "completed": true,
+        "interviewerName": "Liam Chen",
+        "interviewerRole": "Senior Frontend Engineer",
+        "format": "Video Call",
+        "questionsAsked": [
+          "React render cycle optimization",
+          "Debounce implementation from scratch",
+          "CSS Grid & Flexbox edge cases"
+        ],
+        "prepNotes": "Focus on UI performance and accessibility trees",
+        "outcome": "Passed"
+      },
+      {
+        "id": "int-1-2",
+        "roundName": "Virtual Onsite - Architecture & Coding",
+        "scheduledDate": "2026-09-08T10:00:00Z",
+        "completed": true,
+        "interviewerName": "Priya Patel",
+        "interviewerRole": "Tech Lead, Dashboard",
+        "format": "Video Call",
+        "questionsAsked": [
+          "Building a high-throughput transaction feed widget",
+          "State machine for checkout validation"
+        ],
+        "prepNotes": "Emphasize fault tolerance and offline caching",
+        "outcome": "Passed"
+      },
+      {
+        "id": "int-1-3",
+        "roundName": "Values & Behavioral",
+        "scheduledDate": "2026-09-15T15:30:00Z",
+        "completed": true,
+        "interviewerName": "David K.",
+        "interviewerRole": "Engineering Manager",
+        "format": "Video Call",
+        "questionsAsked": [
+          "Handling conflicting product priorities",
+          "Proudest open-source contribution"
+        ],
+        "outcome": "Passed"
+      }
+    ],
+    "timeline": [
+      {
+        "id": "tl-1-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "description": "Applied via internal referral link with tailored frontend resume",
+        "timestamp": "2026-08-14T09:30:00Z",
+        "toStatus": "Applied"
+      },
+      {
+        "id": "tl-1-2",
+        "type": "status_change",
+        "title": "Invited to Technical Screening",
+        "description": "Recruiter reached out with positive resume screen",
+        "timestamp": "2026-08-20T11:15:00Z",
+        "fromStatus": "Applied",
+        "toStatus": "Technical Interview"
+      },
+      {
+        "id": "tl-1-3",
+        "type": "status_change",
+        "title": "Advanced to Final Round Onsite",
+        "description": "Screening feedback: Excellent DOM manipulation and clean code",
+        "timestamp": "2026-08-29T16:00:00Z",
+        "fromStatus": "Technical Interview",
+        "toStatus": "Final Round"
+      },
+      {
+        "id": "tl-1-4",
+        "type": "offer_received",
+        "title": "Offer Received!",
+        "description": "Official written offer letter sent by Marcus Vance. Deadline Oct 5.",
+        "timestamp": "2026-09-18T18:45:00Z",
+        "fromStatus": "Final Round",
+        "toStatus": "Offer"
+      }
+    ],
+    "notes": [
+      {
+        "id": "n-1-1",
+        "date": "2026-09-18",
+        "content": "Competitive offer: $65/hr base rate, $2k/mo housing, 401k matching, hardware allowance."
+      }
+    ],
+    "createdAt": "2026-08-14T09:30:00Z",
+    "updatedAt": "2026-09-18T18:45:00Z"
+  },
+  {
+    "id": "app-2",
+    "company": "Google",
+    "role": "Software Engineering Intern",
+    "jobType": "Internship",
+    "workModel": "Hybrid",
+    "location": "Mountain View, CA",
+    "salaryRange": "$58/hr + Relocation assistance",
+    "jobUrl": "https://careers.google.com/jobs/results/swe-intern-summer",
+    "status": "Technical Interview",
+    "appliedDate": "2026-08-18",
+    "deadline": "2026-09-29",
+    "deadlineType": "Interview Round",
+    "deadlineNotes": "Technical Round 2: Graph algorithms and dynamic programming review",
+    "deadlineCompleted": false,
+    "rating": 5,
+    "resumeVersion": "SWE_General_v2.pdf",
+    "tags": [
+      "Big Tech",
+      "High Priority"
+    ],
+    "source": "Company Website",
+    "contacts": [
+      {
+        "id": "c-2",
+        "name": "Chloe Miller",
+        "role": "University Programs Specialist",
+        "email": "chloemiller@google.com"
+      }
+    ],
+    "interviews": [
+      {
+        "id": "int-2-1",
+        "roundName": "Technical Round 1",
+        "scheduledDate": "2026-09-10T17:00:00Z",
+        "completed": true,
+        "interviewerName": "Alexander W.",
+        "interviewerRole": "Software Engineer III",
+        "format": "Video Call",
+        "questionsAsked": [
+          "Binary tree maximum path sum",
+          "LRU Cache variant with time-to-live"
+        ],
+        "outcome": "Passed"
+      },
+      {
+        "id": "int-2-2",
+        "roundName": "Technical Round 2",
+        "scheduledDate": "2026-09-29T16:00:00Z",
+        "completed": false,
+        "format": "Video Call",
+        "prepNotes": "Revise topological sort and disjoint set union (DSU)"
+      }
+    ],
+    "timeline": [
+      {
+        "id": "tl-2-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "timestamp": "2026-08-18T10:00:00Z",
+        "toStatus": "Applied"
+      },
+      {
+        "id": "tl-2-2",
+        "type": "status_change",
+        "title": "Online Assessment Completed",
+        "description": "Snapshot assessment on Google's internal platform (2 coding questions, 90 mins)",
+        "timestamp": "2026-08-28T14:30:00Z",
+        "fromStatus": "Applied",
+        "toStatus": "Online Assessment"
+      },
+      {
+        "id": "tl-2-3",
+        "type": "status_change",
+        "title": "Passed OA - Scheduled Technical Rounds",
+        "timestamp": "2026-09-02T19:00:00Z",
+        "fromStatus": "Online Assessment",
+        "toStatus": "Technical Interview"
+      }
+    ],
+    "notes": [
+      {
+        "id": "n-2-1",
+        "date": "2026-09-11",
+        "content": "Round 1 interviewer seemed very satisfied with optimal Big-O analysis and edge case testing."
+      }
+    ],
+    "createdAt": "2026-08-18T10:00:00Z",
+    "updatedAt": "2026-09-11T18:00:00Z"
+  },
+  {
+    "id": "app-3",
+    "company": "Figma",
+    "role": "Product Engineering Intern",
+    "jobType": "Internship",
+    "workModel": "Hybrid",
+    "location": "San Francisco, CA",
+    "salaryRange": "$62/hr + housing",
+    "jobUrl": "https://figma.com/careers/product-eng-intern",
+    "status": "Online Assessment",
+    "appliedDate": "2026-09-15",
+    "deadline": "2026-09-27",
+    "deadlineType": "Online Assessment",
+    "deadlineNotes": "Codesignal General Coding Assessment (70 mins). Must achieve 800+ score.",
+    "deadlineCompleted": false,
+    "rating": 5,
+    "resumeVersion": "SWE_Product_v2.pdf",
+    "tags": [
+      "Design Tools",
+      "High Priority"
+    ],
+    "source": "LinkedIn",
+    "contacts": [],
+    "interviews": [],
+    "timeline": [
+      {
+        "id": "tl-3-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "timestamp": "2026-09-15T12:00:00Z",
+        "toStatus": "Applied"
+      },
+      {
+        "id": "tl-3-2",
+        "type": "status_change",
+        "title": "CodeSignal Assessment Received",
+        "description": "Automated invite link received. Valid for 12 days.",
+        "timestamp": "2026-09-16T15:20:00Z",
+        "fromStatus": "Applied",
+        "toStatus": "Online Assessment"
+      }
+    ],
+    "notes": [
+      {
+        "id": "n-3-1",
+        "date": "2026-09-16",
+        "content": "Practice matrix traversal and string parsing prior to starting the timed test."
+      }
+    ],
+    "createdAt": "2026-09-15T12:00:00Z",
+    "updatedAt": "2026-09-16T15:20:00Z"
+  },
+  {
+    "id": "app-4",
+    "company": "Linear",
+    "role": "Full Stack Developer (Co-op)",
+    "jobType": "Co-op",
+    "workModel": "Remote",
+    "location": "Remote (Global)",
+    "salaryRange": "$9,000/mo",
+    "jobUrl": "https://linear.app/careers/intern-fullstack",
+    "status": "Applied",
+    "appliedDate": "2026-09-24",
+    "deadline": "2026-09-25",
+    "deadlineType": "Application Deadline",
+    "deadlineNotes": "Application window closes today at 5:00 PM PST!",
+    "deadlineCompleted": true,
+    "rating": 4,
+    "resumeVersion": "SWE_Frontend_v3.pdf",
+    "tags": [
+      "Remote",
+      "Productivity"
+    ],
+    "source": "Twitter / X",
+    "contacts": [],
+    "interviews": [],
+    "timeline": [
+      {
+        "id": "tl-4-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "description": "Sent custom portfolio project demo link along with thoughtful cover pitch.",
+        "timestamp": "2026-09-24T18:10:00Z",
+        "toStatus": "Applied"
+      }
+    ],
+    "notes": [],
+    "createdAt": "2026-09-24T18:10:00Z",
+    "updatedAt": "2026-09-24T18:10:00Z"
+  },
+  {
+    "id": "app-5",
+    "company": "Datadog",
+    "role": "Software Engineer Intern - Distributed Systems",
+    "jobType": "Internship",
+    "workModel": "Onsite",
+    "location": "New York, NY",
+    "salaryRange": "$60/hr + NYC Corporate Housing",
+    "jobUrl": "https://careers.datadoghq.com/detail/swe-intern-nyc",
+    "status": "Final Round",
+    "appliedDate": "2026-08-20",
+    "deadline": "2026-09-28",
+    "deadlineType": "Interview Round",
+    "deadlineNotes": "Final Round: 3 back-to-back 45-min sessions (Systems, Algorithms, Manager fit)",
+    "deadlineCompleted": false,
+    "rating": 4,
+    "resumeVersion": "SWE_Backend_v2.pdf",
+    "tags": [
+      "Observability",
+      "NYC",
+      "Distributed Systems"
+    ],
+    "source": "Handshake",
+    "contacts": [
+      {
+        "id": "c-5",
+        "name": "Sarah Jenkins",
+        "role": "Campus Recruiter",
+        "email": "sjenkins@datadoghq.com"
+      }
+    ],
+    "interviews": [
+      {
+        "id": "int-5-1",
+        "roundName": "HackerRank OA",
+        "scheduledDate": "2026-08-28T00:00:00Z",
+        "completed": true,
+        "outcome": "Passed"
+      },
+      {
+        "id": "int-5-2",
+        "roundName": "Phone Screen with Engineer",
+        "scheduledDate": "2026-09-12T13:00:00Z",
+        "completed": true,
+        "interviewerName": "Julien M.",
+        "outcome": "Passed"
+      },
+      {
+        "id": "int-5-3",
+        "roundName": "Final Round Onsite / Virtual",
+        "scheduledDate": "2026-09-28T14:00:00Z",
+        "completed": false,
+        "prepNotes": "Review concurrency models (goroutines, worker pools, distributed tracing)"
+      }
+    ],
+    "timeline": [
+      {
+        "id": "tl-5-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "timestamp": "2026-08-20T14:00:00Z",
+        "toStatus": "Applied"
+      },
+      {
+        "id": "tl-5-2",
+        "type": "status_change",
+        "title": "OA Passed (100% test cases)",
+        "timestamp": "2026-08-30T10:00:00Z",
+        "fromStatus": "Applied",
+        "toStatus": "Online Assessment"
+      },
+      {
+        "id": "tl-5-3",
+        "type": "status_change",
+        "title": "Technical Screen Passed",
+        "timestamp": "2026-09-14T11:00:00Z",
+        "fromStatus": "Online Assessment",
+        "toStatus": "Technical Interview"
+      },
+      {
+        "id": "tl-5-4",
+        "type": "status_change",
+        "title": "Invited to Final Round Superday",
+        "timestamp": "2026-09-20T17:30:00Z",
+        "fromStatus": "Technical Interview",
+        "toStatus": "Final Round"
+      }
+    ],
+    "notes": [
+      {
+        "id": "n-5-1",
+        "date": "2026-09-20",
+        "content": "Superday confirmed for Monday Sep 28th. Received prep doc detailing question formats."
+      }
+    ],
+    "createdAt": "2026-08-20T14:00:00Z",
+    "updatedAt": "2026-09-20T17:30:00Z"
+  },
+  {
+    "id": "app-6",
+    "company": "Retool",
+    "role": "Full-Stack Engineer Intern",
+    "jobType": "Internship",
+    "workModel": "Hybrid",
+    "location": "San Francisco, CA",
+    "salaryRange": "$56/hr + housing subsidy",
+    "jobUrl": "https://retool.com/careers/intern-2027",
+    "status": "Behavioral Interview",
+    "appliedDate": "2026-09-01",
+    "deadline": "2026-09-30",
+    "deadlineType": "Interview Round",
+    "deadlineNotes": "Behavioral & Culture interview with Head of Engineering",
+    "deadlineCompleted": false,
+    "rating": 4,
+    "resumeVersion": "SWE_Product_v2.pdf",
+    "tags": [
+      "Developer Tools",
+      "Fast Growth"
+    ],
+    "source": "Company Website",
+    "contacts": [],
+    "interviews": [
+      {
+        "id": "int-6-1",
+        "roundName": "Technical Take-home / Pairing",
+        "scheduledDate": "2026-09-17T16:00:00Z",
+        "completed": true,
+        "interviewerName": "Daniel Wu",
+        "outcome": "Passed"
+      },
+      {
+        "id": "int-6-2",
+        "roundName": "Behavioral & Product Thinking",
+        "scheduledDate": "2026-09-30T15:00:00Z",
+        "completed": false,
+        "prepNotes": "Formulate STAR stories about handling ambiguous requirements."
+      }
+    ],
+    "timeline": [
+      {
+        "id": "tl-6-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "timestamp": "2026-09-01T10:00:00Z",
+        "toStatus": "Applied"
+      },
+      {
+        "id": "tl-6-2",
+        "type": "status_change",
+        "title": "Take-home Paired Session Completed",
+        "timestamp": "2026-09-17T17:30:00Z",
+        "fromStatus": "Applied",
+        "toStatus": "Technical Interview"
+      },
+      {
+        "id": "tl-6-3",
+        "type": "status_change",
+        "title": "Advanced to Behavioral Stage",
+        "timestamp": "2026-09-22T12:00:00Z",
+        "fromStatus": "Technical Interview",
+        "toStatus": "Behavioral Interview"
+      }
+    ],
+    "notes": [],
+    "createdAt": "2026-09-01T10:00:00Z",
+    "updatedAt": "2026-09-22T12:00:00Z"
+  },
+  {
+    "id": "app-7",
+    "company": "Bloomberg",
+    "role": "Software Developer Intern",
+    "jobType": "Internship",
+    "workModel": "Hybrid",
+    "location": "New York, NY",
+    "salaryRange": "$55/hr",
+    "jobUrl": "https://bloomberg.com/careers/software-developer-intern",
+    "status": "Applied",
+    "appliedDate": "2026-09-12",
+    "deadline": "2026-10-02",
+    "deadlineType": "Follow-up",
+    "deadlineNotes": "Follow up with recruiter on application status if no OA received by Friday",
+    "deadlineCompleted": false,
+    "rating": 3,
+    "resumeVersion": "SWE_Backend_v2.pdf",
+    "tags": [
+      "Fintech",
+      "NYC"
+    ],
+    "source": "LinkedIn",
+    "contacts": [],
+    "interviews": [],
+    "timeline": [
+      {
+        "id": "tl-7-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "timestamp": "2026-09-12T09:00:00Z",
+        "toStatus": "Applied"
+      }
+    ],
+    "notes": [],
+    "createdAt": "2026-09-12T09:00:00Z",
+    "updatedAt": "2026-09-12T09:00:00Z"
+  },
+  {
+    "id": "app-8",
+    "company": "Spotify",
+    "role": "Backend Engineering Intern",
+    "jobType": "Internship",
+    "workModel": "Remote",
+    "location": "Remote / Boston, MA",
+    "salaryRange": "$52/hr",
+    "jobUrl": "https://spotify.com/jobs/intern-backend",
+    "status": "Wishlist",
+    "appliedDate": "2026-09-25",
+    "deadline": "2026-10-01",
+    "deadlineType": "Application Deadline",
+    "deadlineNotes": "Finish polishing portfolio sound visualizer project before submitting",
+    "deadlineCompleted": false,
+    "rating": 4,
+    "resumeVersion": "SWE_Backend_v2.pdf",
+    "tags": [
+      "Music Tech",
+      "Streaming"
+    ],
+    "source": "Company Website",
+    "contacts": [],
+    "interviews": [],
+    "timeline": [
+      {
+        "id": "tl-8-1",
+        "type": "status_change",
+        "title": "Added to Wishlist",
+        "timestamp": "2026-09-20T14:15:00Z",
+        "toStatus": "Wishlist"
+      }
+    ],
+    "notes": [],
+    "createdAt": "2026-09-20T14:15:00Z",
+    "updatedAt": "2026-09-20T14:15:00Z"
+  },
+  {
+    "id": "app-9",
+    "company": "Cloudflare",
+    "role": "Systems Engineering Intern",
+    "jobType": "Internship",
+    "workModel": "Remote",
+    "location": "Austin, TX / Remote",
+    "salaryRange": "$54/hr",
+    "jobUrl": "https://cloudflare.com/careers/systems-intern",
+    "status": "Rejected",
+    "appliedDate": "2026-08-10",
+    "deadline": null,
+    "rating": 3,
+    "resumeVersion": "SWE_Backend_v2.pdf",
+    "tags": [
+      "Networking",
+      "Security"
+    ],
+    "source": "LinkedIn",
+    "contacts": [],
+    "interviews": [
+      {
+        "id": "int-9-1",
+        "roundName": "Online Coding Assessment",
+        "scheduledDate": "2026-08-16T12:00:00Z",
+        "completed": true,
+        "outcome": "Rejected"
+      }
+    ],
+    "timeline": [
+      {
+        "id": "tl-9-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "timestamp": "2026-08-10T10:00:00Z",
+        "toStatus": "Applied"
+      },
+      {
+        "id": "tl-9-2",
+        "type": "status_change",
+        "title": "OA Completed",
+        "timestamp": "2026-08-16T14:00:00Z",
+        "fromStatus": "Applied",
+        "toStatus": "Online Assessment"
+      },
+      {
+        "id": "tl-9-3",
+        "type": "status_change",
+        "title": "Application Not Selected",
+        "description": "Received standard high-volume pool rejection notification.",
+        "timestamp": "2026-08-24T09:00:00Z",
+        "fromStatus": "Online Assessment",
+        "toStatus": "Rejected"
+      }
+    ],
+    "notes": [
+      {
+        "id": "n-9-1",
+        "date": "2026-08-24",
+        "content": "Question 2 on bit manipulation was tricky. Practice more bitwise operations."
+      }
+    ],
+    "createdAt": "2026-08-10T10:00:00Z",
+    "updatedAt": "2026-08-24T09:00:00Z"
+  },
+  {
+    "id": "app-10",
+    "company": "Notion",
+    "role": "Software Engineering Intern",
+    "jobType": "Internship",
+    "workModel": "Hybrid",
+    "location": "San Francisco, CA",
+    "salaryRange": "$58/hr",
+    "jobUrl": "https://notion.so/careers/swe-intern",
+    "status": "Rejected",
+    "appliedDate": "2026-08-05",
+    "deadline": null,
+    "rating": 4,
+    "resumeVersion": "SWE_Product_v2.pdf",
+    "tags": [
+      "Productivity",
+      "San Francisco"
+    ],
+    "source": "LinkedIn",
+    "contacts": [],
+    "interviews": [],
+    "timeline": [
+      {
+        "id": "tl-10-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "timestamp": "2026-08-05T08:00:00Z",
+        "toStatus": "Applied"
+      },
+      {
+        "id": "tl-10-2",
+        "type": "status_change",
+        "title": "Resume Screen Rejection",
+        "timestamp": "2026-08-18T16:00:00Z",
+        "fromStatus": "Applied",
+        "toStatus": "Rejected"
+      }
+    ],
+    "notes": [],
+    "createdAt": "2026-08-05T08:00:00Z",
+    "updatedAt": "2026-08-18T16:00:00Z"
+  },
+  {
+    "id": "app-11",
+    "company": "Ramp",
+    "role": "Financial Systems Engineer Intern",
+    "jobType": "Internship",
+    "workModel": "Hybrid",
+    "location": "New York, NY",
+    "salaryRange": "$64/hr + housing",
+    "jobUrl": "https://ramp.com/careers/eng-intern",
+    "status": "Online Assessment",
+    "appliedDate": "2026-09-18",
+    "deadline": "2026-09-26",
+    "deadlineType": "Online Assessment",
+    "deadlineNotes": "Finish HackerRank by Saturday midnight (Tomorrow!)",
+    "deadlineCompleted": false,
+    "rating": 5,
+    "resumeVersion": "SWE_Backend_v2.pdf",
+    "tags": [
+      "Fintech",
+      "High Priority"
+    ],
+    "source": "Referral",
+    "contacts": [],
+    "interviews": [],
+    "timeline": [
+      {
+        "id": "tl-11-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "timestamp": "2026-09-18T11:00:00Z",
+        "toStatus": "Applied"
+      },
+      {
+        "id": "tl-11-2",
+        "type": "status_change",
+        "title": "OA Invitation Received",
+        "timestamp": "2026-09-19T14:00:00Z",
+        "fromStatus": "Applied",
+        "toStatus": "Online Assessment"
+      }
+    ],
+    "notes": [],
+    "createdAt": "2026-09-18T11:00:00Z",
+    "updatedAt": "2026-09-19T14:00:00Z"
+  },
+  {
+    "id": "app-12",
+    "company": "Anthropic",
+    "role": "AI Systems Engineering Intern",
+    "jobType": "Internship",
+    "workModel": "Onsite",
+    "location": "San Francisco, CA",
+    "salaryRange": "$70/hr + relocation stipend",
+    "jobUrl": "https://anthropic.com/careers/systems-intern",
+    "status": "Applied",
+    "appliedDate": "2026-09-22",
+    "deadline": "2026-10-06",
+    "deadlineType": "Follow-up",
+    "deadlineNotes": "Check email for initial technical assessment invite",
+    "deadlineCompleted": false,
+    "rating": 5,
+    "resumeVersion": "SWE_Backend_v2.pdf",
+    "tags": [
+      "AI",
+      "Research",
+      "Top Priority"
+    ],
+    "source": "Company Website",
+    "contacts": [],
+    "interviews": [],
+    "timeline": [
+      {
+        "id": "tl-12-1",
+        "type": "status_change",
+        "title": "Application Submitted",
+        "description": "Submitted customized CV highlighting parallel computing and CUDA basics",
+        "timestamp": "2026-09-22T19:30:00Z",
+        "toStatus": "Applied"
+      }
+    ],
+    "notes": [],
+    "createdAt": "2026-09-22T19:30:00Z",
+    "updatedAt": "2026-09-22T19:30:00Z"
+  }
+]

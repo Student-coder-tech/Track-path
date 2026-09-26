@@ -1,0 +1,7 @@
+{
+  "name": "TrackPath - Job & Internship Tracker",
+  "description": "Comprehensive job and internship application tracker with backend status history, deadline alerts, interview pipeline management, and conversion analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
