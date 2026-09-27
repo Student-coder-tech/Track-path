@@ -1,28 +1,26 @@
-import 'dotenv/config';
 import express, { type NextFunction, type Request, type Response } from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
-import { createServer as createViteServer } from 'vite';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { StorageService, ValidationError } from './server/storage';
+import { StorageService, ValidationError } from './storage.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL === '1';
+
 const app = express();
-const PORT = Number.parseInt(process.env.PORT || '3000', 10);
-const isProduction = process.env.NODE_ENV === 'production';
-
-app.disable('x-powered-by');
-app.use(helmet({ contentSecurityPolicy: false }));
-app.use(cors({ origin: process.env.APP_URL?.trim() || true }));
-app.use(express.json({ limit: '2mb' }));
 
 const asyncRoute = (handler: (req: Request, res: Response) => Promise<void>) => (req: Request, res: Response, next: NextFunction) => {
   handler(req, res).catch(next);
 };
 const error = (res: Response, status: number, message: string) => res.status(status).json({ error: message });
 const id = (req: Request) => String(req.params.id);
+
+app.disable('x-powered-by');
+app.use(helmet({ contentSecurityPolicy: false }));
+app.use(cors({ origin: process.env.APP_URL?.trim() || true }));
+app.use(express.json({ limit: '2mb' }));
+
+app.use('/api', (_req, _res, next) => {
+  StorageService.connect().then(() => next(), next);
+});
 
 app.get('/api/health', asyncRoute(async (_req, res) => {
   await StorageService.getAll();
@@ -116,6 +114,8 @@ app.post('/api/reset-sample', asyncRoute(async (_req, res) => {
   res.json({ success: true, count: applications.length, applications });
 }));
 
+app.use('/api', (_req, res) => error(res, 404, 'Not found'));
+
 app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
   if (res.headersSent) return;
   if (err instanceof ValidationError) return void error(res, err.statusCode, err.message);
@@ -123,26 +123,4 @@ app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
   error(res, 500, isProduction ? 'Internal server error' : (err instanceof Error ? err.message : 'Internal server error'));
 });
 
-async function startServer() {
-  await StorageService.connect();
-  if (process.env.SEED_ON_START === 'true') {
-    const count = await StorageService.seedIfEmpty();
-    if (count) console.log(`Seeded ${count} applications into MongoDB`);
-  }
-  if (!isProduction) {
-    const vite = await createViteServer({ server: { middlewareMode: true }, appType: 'spa' });
-    app.use(vite.middlewares);
-  } else {
-    app.use(express.static(path.resolve(__dirname, 'dist')));
-    app.get('*', (_req, res) => res.sendFile(path.resolve(__dirname, 'dist', 'index.html')));
-  }
-  const server = app.listen(PORT, () => console.log(`TrackPath Server running at http://localhost:${PORT}`));
-  const shutdown = async (signal: string) => { console.log(`${signal}: shutting down`); server.close(async () => { await StorageService.close(); process.exit(0); }); };
-  process.once('SIGINT', () => void shutdown('SIGINT'));
-  process.once('SIGTERM', () => void shutdown('SIGTERM'));
-}
-
-startServer().catch((err) => {
-  console.error(`Unable to start TrackPath: ${err instanceof Error ? err.message : err}`);
-  process.exitCode = 1;
-});
+export default app;

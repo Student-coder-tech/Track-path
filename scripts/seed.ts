@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { StorageService } from '../server/storage';
+import { StorageService } from '../server/storage.js';
 
 try {
   await StorageService.connect();

@@ -1,6 +1,4 @@
 import fs from 'node:fs/promises';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
 import { MongoClient, type Collection, type Db } from 'mongodb';
 import type {
@@ -11,10 +9,9 @@ import type {
   TimelineEvent,
   InterviewRound,
   ApplicationNote,
-} from '../src/types';
+} from '../src/types.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const seedPath = path.resolve(__dirname, '../data/applications.json');
+const seedUrl = new URL('../data/applications.json', import.meta.url);
 
 export const APPLICATION_STATUSES: ApplicationStatus[] = [
   'Wishlist', 'Applied', 'Online Assessment', 'Technical Interview',
@@ -368,14 +365,14 @@ export class StorageService {
   }
 
   static async resetToSeed(): Promise<JobApplication[]> {
-    const raw = await fs.readFile(seedPath, 'utf8');
+    const raw = await fs.readFile(seedUrl, 'utf8');
     const items = JSON.parse(raw) as unknown[];
     return this.replaceAll(items);
   }
 
   static async seedIfEmpty(): Promise<number> {
     if (await this.getCollection().countDocuments() > 0) return 0;
-    const raw = await fs.readFile(seedPath, 'utf8');
+    const raw = await fs.readFile(seedUrl, 'utf8');
     const seeded = await this.replaceAll(JSON.parse(raw) as unknown[]);
     return seeded.length;
   }

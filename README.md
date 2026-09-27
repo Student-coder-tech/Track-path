@@ -68,3 +68,19 @@ Validation rejects invalid enum values, dates, ratings, URLs, nested arrays, mal
 ## Deployment requirements
 
 Use a MongoDB deployment reachable from the server (MongoDB Atlas is the simplest option), allow the server's outbound IP in the MongoDB network access list, and store `MONGODB_URI` as a deployment secret. Do not commit `.env` or credentials.
+
+## Deploy to Vercel
+
+The project is configured for Vercel as a Vite frontend (`dist`) plus a single Express function:
+
+- `api/index.ts` exports the Express app (`server/app.ts`) — no `listen()`, no Vite imports, MongoDB connects lazily per request and the client is reused across warm invocations
+- `vercel.json` builds with `npm run build`, serves `dist` from the CDN, and rewrites `/api/*` to the function (Express sees the original request paths)
+- `server/host.ts` is only used for local development (`npm run dev`) and self-hosted production (`npm start`); it is not part of the function bundle
+
+Setup:
+
+1. Import the repository in Vercel (framework preset: Vite is auto-detected; `buildCommand`/`outputDirectory` are already set in `vercel.json`)
+2. Under **Project → Settings → Environment Variables**, add `MONGODB_URI` (required) and optionally `MONGODB_DB`. Leave `APP_URL` blank for same-origin. `PORT` and `SEED_ON_START` are only used by `server/host.ts` and can be skipped
+3. MongoDB Atlas: since Vercel functions run from changing IP ranges, set the network access list to `0.0.0.0/0` (rely on database credentials) or use Atlas's Vercel integration
+4. Seed sample data once against the production database: set `MONGODB_URI` in a local `.env`, then run `npm run seed`
+5. Deploy — `GET /api/health` should return `{ "ok": true, "database": "mongodb" }`
