@@ -1,59 +1,64 @@
 import { useEffect, useState } from 'react';
-import splashImage from '../assets/trackpath.jpeg';
+import { TrackPathLoader } from './TrackPathLoader';
 
-const ENTER_MS = 1500;
-const HOLD_MS = 400;
-const EXIT_MS = 600;
-const PRELOAD_FALLBACK_MS = 5000;
+// Loader intro runs ~2.1s (title 1.4s + 0.15s delay, subtitle ends ~2.05s),
+// then a short hold before the overlay fades away.
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' &&
+  typeof window.matchMedia === 'function' &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /**
- * First-load splash screen. Shows the branded Track Path image with the
- * fade-in / scale-up animation, then fades out and unmounts itself so the
- * existing app underneath is revealed. Purely presentational: it never blocks
- * the app's data fetching and removes itself even if the image fails to load.
+ * First-load splash screen: plays the Track Path loader animation, then fades
+ * out and unmounts itself so the existing app underneath is revealed. Purely
+ * presentational — it never blocks the app's data fetching and always removes
+ * itself, even if the font fails to load.
  */
 export function SplashScreen() {
   const [ready, setReady] = useState(false);
   const [exiting, setExiting] = useState(false);
   const [dismissed, setDismissed] = useState(false);
 
-  // Preload the image so the animation starts once it is actually available.
+  const reducedMotion = prefersReducedMotion();
+  const introMs = reducedMotion ? 300 : 2300;
+  const exitMs = reducedMotion ? 150 : 600;
+
+  // Reveal once the Cinzel font is available (so the title reveal doesn't
+  // swap fonts mid-animation), with a hard fallback so we never get stuck.
   useEffect(() => {
-    let cancelled = false;
+    let disposed = false;
+    let revealed = false;
+
     const reveal = () => {
-      if (!cancelled) setReady(true);
+      if (disposed || revealed) return;
+      revealed = true;
+      setReady(true);
     };
 
-    const img = new Image();
-    img.onload = reveal;
-    img.onerror = reveal;
-    img.src = splashImage;
-    if (img.complete) reveal();
+    const fallback = window.setTimeout(reveal, 2000);
 
-    // Safety net: never leave the visitor stuck behind the splash screen.
-    const fallback = window.setTimeout(reveal, PRELOAD_FALLBACK_MS);
+    if (document.fonts && document.fonts.load) {
+      document.fonts.load('700 16px Cinzel').then(reveal, reveal);
+    } else {
+      reveal();
+    }
 
     return () => {
-      cancelled = true;
+      disposed = true;
       window.clearTimeout(fallback);
-      img.onload = null;
-      img.onerror = null;
     };
   }, []);
 
   // Enter -> hold -> fade out -> unmount.
   useEffect(() => {
     if (!ready) return;
-    const exitTimer = window.setTimeout(() => setExiting(true), ENTER_MS + HOLD_MS);
-    const unmountTimer = window.setTimeout(
-      () => setDismissed(true),
-      ENTER_MS + HOLD_MS + EXIT_MS
-    );
+    const exitTimer = window.setTimeout(() => setExiting(true), introMs);
+    const unmountTimer = window.setTimeout(() => setDismissed(true), introMs + exitMs);
     return () => {
       window.clearTimeout(exitTimer);
       window.clearTimeout(unmountTimer);
     };
-  }, [ready]);
+  }, [ready, introMs, exitMs]);
 
   if (dismissed) return null;
 
@@ -62,15 +67,7 @@ export function SplashScreen() {
       className={`splash-screen${exiting ? ' is-exiting' : ''}`}
       aria-hidden={exiting ? 'true' : undefined}
     >
-      {ready && (
-        <div className="stage">
-          <img
-            src={splashImage}
-            alt="Track Path - Job & Internship Tracker"
-            className="animated-image"
-          />
-        </div>
-      )}
+      {ready && <TrackPathLoader />}
     </div>
   );
 }

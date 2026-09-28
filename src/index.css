@@ -44,24 +44,21 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   background: #475569;
 }
 
-/* Splash / image-loading screen.
-   Reused from the provided snippet, scoped under .splash-screen so existing
-   app layout and styles are left untouched. */
-.splash-screen,
-.splash-screen * {
+/* Splash / loading screen overlay.
+   Scoped under .splash-screen so the existing app layout and styles are
+   left untouched. Only rules for the overlay itself live here — no universal
+   descendant selectors, so Tailwind utilities inside the loader keep working. */
+.splash-screen {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.splash-screen {
   position: fixed;
   inset: 0;
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0a0305; /* Deep luxury backdrop matching the image */
+  background-color: #070204;
   opacity: 1;
   transition: opacity 0.6s ease;
 }
@@ -71,29 +68,66 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   pointer-events: none;
 }
 
-.splash-screen .stage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-}
+/* ============================================================
+   Track Path - Smooth Loading Text Animation
+   Keyframes referenced by the loader's animate-[...] utilities.
+   ============================================================ */
 
-/* Subtle fade-in and scale-up animation */
-.splash-screen .animated-image {
-  max-width: 90vw;
-  max-height: 85vh;
-  width: auto;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
-  /* Animation parameters: 1.5s with decelerating cubic-bezier for a clean, executive feel */
-  animation: fadeInScale 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes fadeInScale {
+@keyframes smoothTitleReveal {
   0% {
     opacity: 0;
-    transform: scale(0.94);
+    transform: translateY(115%) scale(0.95);
+    filter: blur(10px);
+  }
+  60% {
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes expandLine {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes popDiamond {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+@keyframes subtitleDrift {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+    letter-spacing: 0.12em;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 0.95;
+    transform: translateY(0);
+    letter-spacing: 0.32em;
+    filter: blur(0px);
+  }
+}
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
   }
   100% {
     opacity: 1;
@@ -101,12 +135,42 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   }
 }
 
+@keyframes borderAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes progressTravel {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .splash-screen {
     transition-duration: 0.01ms;
   }
-  .splash-screen .animated-image {
-    animation-duration: 0.01ms;
+  .splash-screen * {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
   }
 }
 
