@@ -193,7 +193,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
             <select
               value={application.status}
               onChange={(e) => handleStatusChange(e.target.value as ApplicationStatus)}
-              className="flex-1 px-3 py-1.5 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+              className="flex-1 px-3 py-1.5 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 bg-input dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
             >
               {statuses.map((st) => (
                 <option key={st} value={st}>
@@ -226,7 +226,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
                 value={statusComment}
                 onChange={(e) => setStatusComment(e.target.value)}
                 placeholder="Optional note: e.g. Passed screen, scheduled onsite for next week..."
-                className="w-full px-2.5 py-1.5 text-xs bg-white dark:bg-slate-800 border border-indigo-200 dark:border-indigo-800 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full px-2.5 py-1.5 text-xs bg-input dark:bg-slate-800 border border-indigo-200 dark:border-indigo-800 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-1 focus:ring-indigo-500"
               />
               <div className="flex items-center justify-end gap-2">
                 <button
@@ -262,7 +262,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
               className={`px-2.5 py-1 rounded text-[11px] font-medium transition-colors ${
                 application.deadlineCompleted
                   ? 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300'
-                  : 'bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
+                  : 'bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
               }`}
             >
               {application.deadlineCompleted ? 'Completed ✓' : 'Mark Done'}
@@ -393,7 +393,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
                         value={roundName}
                         onChange={(e) => setRoundName(e.target.value)}
                         placeholder="e.g. Technical Round 1, System Design"
-                        className="w-full px-2.5 py-1.5 text-xs bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
+                        className="w-full px-2.5 py-1.5 text-xs bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
                       />
                     </div>
                     <div>
@@ -402,7 +402,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
                         type="datetime-local"
                         value={scheduledDate}
                         onChange={(e) => setScheduledDate(e.target.value)}
-                        className="w-full px-2.5 py-1.5 text-xs bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100 font-mono"
+                        className="w-full px-2.5 py-1.5 text-xs bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100 font-mono"
                       />
                     </div>
                   </div>
@@ -415,7 +415,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
                         value={interviewerName}
                         onChange={(e) => setInterviewerName(e.target.value)}
                         placeholder="e.g. Liam Chen"
-                        className="w-full px-2.5 py-1.5 text-xs bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
+                        className="w-full px-2.5 py-1.5 text-xs bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
                       />
                     </div>
                     <div>
@@ -425,7 +425,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
                         value={interviewerRole}
                         onChange={(e) => setInterviewerRole(e.target.value)}
                         placeholder="e.g. Senior Frontend Engineer"
-                        className="w-full px-2.5 py-1.5 text-xs bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
+                        className="w-full px-2.5 py-1.5 text-xs bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
                       />
                     </div>
                   </div>
@@ -437,7 +437,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
                       value={prepNotes}
                       onChange={(e) => setPrepNotes(e.target.value)}
                       placeholder="e.g. Practice graph traversals, review STAR stories"
-                      className="w-full px-2.5 py-1.5 text-xs bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
+                      className="w-full px-2.5 py-1.5 text-xs bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
                     />
                   </div>
 
@@ -449,7 +449,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
                         value={questionInput}
                         onChange={(e) => setQuestionInput(e.target.value)}
                         placeholder="Add a question asked in this round..."
-                        className="flex-1 px-2.5 py-1.5 text-xs bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
+                        className="flex-1 px-2.5 py-1.5 text-xs bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100"
                       />
                       <button
                         type="button"
@@ -462,7 +462,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
                     {questionsList.length > 0 && (
                       <ul className="mt-2 space-y-1">
                         {questionsList.map((q, idx) => (
-                          <li key={idx} className="text-xs text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 px-2 py-1 rounded border border-slate-200 dark:border-slate-700">
+                          <li key={idx} className="text-xs text-slate-600 dark:text-slate-300 bg-input dark:bg-slate-800 px-2 py-1 rounded border border-slate-200 dark:border-slate-700">
                             • {q}
                           </li>
                         ))}
@@ -574,7 +574,7 @@ export const ApplicationDetailsDrawer: React.FC<ApplicationDetailsDrawerProps> =
                   value={newNote}
                   onChange={(e) => setNewNote(e.target.value)}
                   placeholder="Add quick notes: recruiter feedback, compensation details, tech stack notes..."
-                  className="w-full px-3 py-2 text-xs bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                  className="w-full px-3 py-2 text-xs bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
                 />
                 <div className="flex justify-end">
                   <button

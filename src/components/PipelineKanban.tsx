@@ -105,7 +105,7 @@ export const PipelineKanban: React.FC<PipelineKanbanProps> = ({
         return (
           <div
             key={col.id}
-            className="w-80 shrink-0 bg-slate-100/80 dark:bg-slate-900/60 rounded-2xl p-3 border border-slate-200/80 dark:border-slate-800 flex flex-col max-h-[calc(100vh-210px)] transition-colors duration-150"
+            className="w-80 shrink-0 bg-column/80 dark:bg-slate-900/60 rounded-2xl p-3 border border-line/80 dark:border-slate-800 flex flex-col max-h-[calc(100vh-210px)] transition-colors duration-150"
           >
             {/* Column Header */}
             <div className="flex items-center justify-between px-1.5 py-1 mb-2.5">
@@ -135,7 +135,7 @@ export const PipelineKanban: React.FC<PipelineKanbanProps> = ({
                     <div
                       key={app.id}
                       onClick={() => onSelectApplication(app)}
-                      className={`group bg-white dark:bg-slate-900 rounded-xl p-3.5 border transition-all duration-150 cursor-pointer shadow-xs hover:shadow-md hover:border-indigo-400 dark:hover:border-indigo-500 ${
+                      className={`group bg-surface dark:bg-slate-900 rounded-xl p-3.5 border transition-all duration-150 cursor-pointer shadow-xs hover:shadow-md hover:border-indigo-400 dark:hover:border-indigo-500 ${
                         isOffer
                           ? 'border-emerald-300 dark:border-emerald-700/60 ring-1 ring-emerald-200/50 dark:ring-emerald-900/30'
                           : isRejected
@@ -194,7 +194,7 @@ export const PipelineKanban: React.FC<PipelineKanbanProps> = ({
                       )}
 
                       {/* Bottom Footer of Card: Quick Action & Date */}
-                      <div className="mt-2.5 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400 dark:text-slate-500 font-mono">
+                      <div className="mt-2.5 pt-2 border-t border-line-soft dark:border-slate-800 flex items-center justify-between text-[11px] text-ink-muted dark:text-slate-500 font-mono">
                         <span>Applied {app.appliedDate}</span>
 
                         {nextStatus && (

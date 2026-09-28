@@ -54,7 +54,7 @@ export const DeadlinesView: React.FC<DeadlinesViewProps> = ({
         <div className="flex items-center gap-3">
           <button
             onClick={handleExport}
-            className="px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/80 rounded-xl border border-slate-300 dark:border-slate-700 shadow-2xs transition-colors flex items-center gap-2"
+            className="px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-200 bg-input dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/80 rounded-xl border border-slate-300 dark:border-slate-700 shadow-2xs transition-colors flex items-center gap-2"
           >
             <Download className="w-4 h-4 text-slate-500 dark:text-slate-400" />
             <span>Export to Calendar (.ics)</span>
@@ -151,7 +151,7 @@ export const DeadlinesView: React.FC<DeadlinesViewProps> = ({
                     {app && (
                       <button
                         onClick={() => onSelectApplication(app)}
-                        className="px-3 py-1.5 text-xs font-semibold text-rose-700 dark:text-rose-300 bg-white dark:bg-slate-800 hover:bg-rose-100 dark:hover:bg-slate-700 rounded-lg border border-rose-200 dark:border-rose-800 transition-colors shrink-0"
+                        className="px-3 py-1.5 text-xs font-semibold text-rose-700 dark:text-rose-300 bg-input dark:bg-slate-800 hover:bg-rose-100 dark:hover:bg-slate-700 rounded-lg border border-rose-200 dark:border-rose-800 transition-colors shrink-0"
                       >
                         View App
                       </button>
@@ -202,7 +202,7 @@ export const DeadlinesView: React.FC<DeadlinesViewProps> = ({
                     {app && (
                       <button
                         onClick={() => onSelectApplication(app)}
-                        className="px-3 py-1.5 text-xs font-semibold text-amber-800 dark:text-amber-300 bg-white dark:bg-slate-800 hover:bg-amber-100 dark:hover:bg-slate-700 rounded-lg border border-amber-300 dark:border-amber-800 transition-colors shrink-0"
+                        className="px-3 py-1.5 text-xs font-semibold text-amber-800 dark:text-amber-300 bg-input dark:bg-slate-800 hover:bg-amber-100 dark:hover:bg-slate-700 rounded-lg border border-amber-300 dark:border-amber-800 transition-colors shrink-0"
                       >
                         View App
                       </button>

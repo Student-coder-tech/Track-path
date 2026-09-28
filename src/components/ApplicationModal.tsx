@@ -139,7 +139,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
                 placeholder="e.g. Stripe, Figma, Datadog"
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               />
             </div>
             <div>
@@ -152,7 +152,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
                 placeholder="e.g. Software Engineer Intern"
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               />
             </div>
           </div>
@@ -164,7 +164,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
               <select
                 value={status}
                 onChange={(e) => setStatus(e.target.value as ApplicationStatus)}
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               >
                 <option value="Wishlist">Wishlist</option>
                 <option value="Applied">Applied</option>
@@ -183,7 +183,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
               <select
                 value={jobType}
                 onChange={(e) => setJobType(e.target.value as JobType)}
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               >
                 <option value="Internship">Internship</option>
                 <option value="Full-time">Full-time</option>
@@ -198,7 +198,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
               <select
                 value={workModel}
                 onChange={(e) => setWorkModel(e.target.value as WorkModel)}
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               >
                 <option value="Hybrid">Hybrid</option>
                 <option value="Remote">Remote</option>
@@ -216,7 +216,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 placeholder="e.g. San Francisco, CA or Remote"
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               />
             </div>
             <div>
@@ -226,7 +226,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={salaryRange}
                 onChange={(e) => setSalaryRange(e.target.value)}
                 placeholder="e.g. $60/hr or $125k/yr"
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               />
             </div>
           </div>
@@ -239,7 +239,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 type="date"
                 value={appliedDate}
                 onChange={(e) => setAppliedDate(e.target.value)}
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm font-mono"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm font-mono"
               />
             </div>
             <div>
@@ -278,7 +278,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                   type="date"
                   value={deadline}
                   onChange={(e) => setDeadline(e.target.value)}
-                  className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100 text-xs font-mono"
+                  className="w-full px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100 text-xs font-mono"
                 />
               </div>
 
@@ -287,7 +287,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 <select
                   value={deadlineType}
                   onChange={(e) => setDeadlineType(e.target.value as DeadlineType)}
-                  className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100 text-xs"
+                  className="w-full px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100 text-xs"
                 >
                   <option value="Online Assessment">Online Assessment (OA)</option>
                   <option value="Interview Round">Interview Round</option>
@@ -305,7 +305,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={deadlineNotes}
                 onChange={(e) => setDeadlineNotes(e.target.value)}
                 placeholder="e.g. HackerRank 90 mins test, or review tree algorithms"
-                className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 text-xs"
+                className="w-full px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-md text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 text-xs"
               />
             </div>
           </div>
@@ -319,7 +319,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={jobUrl}
                 onChange={(e) => setJobUrl(e.target.value)}
                 placeholder="https://..."
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               />
             </div>
             <div>
@@ -329,7 +329,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={resumeVersion}
                 onChange={(e) => setResumeVersion(e.target.value)}
                 placeholder="e.g. SWE_Backend_v3.pdf"
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm font-mono text-xs"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm font-mono text-xs"
               />
             </div>
           </div>
@@ -343,7 +343,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={referralName}
                 onChange={(e) => setReferralName(e.target.value)}
                 placeholder="e.g. Referred by Jane Doe (Staff Eng)"
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               />
             </div>
             <div>
@@ -353,7 +353,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={tagsInput}
                 onChange={(e) => setTagsInput(e.target.value)}
                 placeholder="Fintech, High Priority, NYC"
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               />
             </div>
           </div>
@@ -367,7 +367,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                 value={noteContent}
                 onChange={(e) => setNoteContent(e.target.value)}
                 placeholder="Any key details, recruiter contact notes, or checklist items..."
-                className="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
+                className="w-full px-3 py-2 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 text-sm"
               />
             </div>
           )}

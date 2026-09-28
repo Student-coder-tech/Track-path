@@ -33,7 +33,7 @@ export const TopNav: React.FC<TopNavProps> = ({
   ).length;
 
   return (
-    <header className="sticky top-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-150">
+    <header className="sticky top-0 z-30 bg-header/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-header-line dark:border-slate-800 transition-colors duration-150">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* Zone 1: Single text element wordmark */}
@@ -41,9 +41,9 @@ export const TopNav: React.FC<TopNavProps> = ({
           <a
             href="#"
             onClick={(e) => { e.preventDefault(); onSelectTab('pipeline'); }}
-            className="text-xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2 group"
+            className="text-xl font-bold tracking-tight text-ink dark:text-white flex items-center gap-2 group"
           >
-            <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-sm group-hover:bg-indigo-700 transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-brand flex items-center justify-center text-white font-bold text-sm shadow-xs group-hover:bg-brand-strong transition-colors">
               TP
             </div>
             <span>TrackPath</span>
@@ -56,11 +56,11 @@ export const TopNav: React.FC<TopNavProps> = ({
             onClick={() => onSelectTab('pipeline')}
             className={`px-3.5 py-1.5 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 ${
               currentTab === 'pipeline'
-                ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/60'
+                ? 'bg-brand-soft dark:bg-indigo-950/60 text-brand dark:text-indigo-300 font-semibold'
+                : 'text-ink-2 dark:text-slate-400 hover:text-ink dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/60'
             }`}
           >
-            <Columns3 className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+            <Columns3 className="w-4 h-4" />
             <span>Pipeline</span>
           </button>
 
@@ -68,11 +68,11 @@ export const TopNav: React.FC<TopNavProps> = ({
             onClick={() => onSelectTab('deadlines')}
             className={`px-3.5 py-1.5 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 relative ${
               currentTab === 'deadlines'
-                ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/60'
+                ? 'bg-brand-soft dark:bg-indigo-950/60 text-brand dark:text-indigo-300 font-semibold'
+                : 'text-ink-2 dark:text-slate-400 hover:text-ink dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/60'
             }`}
           >
-            <Calendar className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+            <Calendar className="w-4 h-4" />
             <span>Deadlines</span>
             {urgentCount > 0 && (
               <span className="ml-1 px-1.5 py-0.5 text-[11px] font-semibold bg-amber-500 text-white rounded-full">
@@ -85,11 +85,11 @@ export const TopNav: React.FC<TopNavProps> = ({
             onClick={() => onSelectTab('analytics')}
             className={`px-3.5 py-1.5 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 ${
               currentTab === 'analytics'
-                ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/60'
+                ? 'bg-brand-soft dark:bg-indigo-950/60 text-brand dark:text-indigo-300 font-semibold'
+                : 'text-ink-2 dark:text-slate-400 hover:text-ink dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/60'
             }`}
           >
-            <TrendingUp className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+            <TrendingUp className="w-4 h-4" />
             <span>Analytics</span>
           </button>
 
@@ -97,11 +97,11 @@ export const TopNav: React.FC<TopNavProps> = ({
             onClick={() => onSelectTab('prep')}
             className={`px-3.5 py-1.5 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 ${
               currentTab === 'prep'
-                ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/60'
+                ? 'bg-brand-soft dark:bg-indigo-950/60 text-brand dark:text-indigo-300 font-semibold'
+                : 'text-ink-2 dark:text-slate-400 hover:text-ink dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/60'
             }`}
           >
-            <BookOpen className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+            <BookOpen className="w-4 h-4" />
             <span>Interview Prep</span>
           </button>
         </nav>
@@ -140,7 +140,7 @@ export const TopNav: React.FC<TopNavProps> = ({
                   className="fixed inset-0 z-40"
                   onClick={() => setMenuOpen(false)}
                 />
-                <div className="absolute right-0 mt-2 w-52 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 py-1.5 z-50 text-xs">
+                <div className="absolute right-0 mt-2 w-52 bg-input dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 py-1.5 z-50 text-xs">
                   <button
                     onClick={() => { onExportCsv(); setMenuOpen(false); }}
                     className="w-full text-left px-3.5 py-2 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/60 flex items-center gap-2"
@@ -186,7 +186,7 @@ export const TopNav: React.FC<TopNavProps> = ({
           {/* Primary Action Button */}
           <button
             onClick={onOpenNewModal}
-            className="px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 rounded-lg shadow-sm transition-all flex items-center gap-1.5 whitespace-nowrap"
+            className="px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-brand hover:bg-brand-strong active:bg-brand-strong rounded-lg shadow-sm transition-all flex items-center gap-1.5 whitespace-nowrap"
           >
             <Plus className="w-4 h-4" />
             <span>Add Application</span>
@@ -196,7 +196,7 @@ export const TopNav: React.FC<TopNavProps> = ({
       </div>
 
       {/* Mobile Tab Bar */}
-      <div className="md:hidden flex items-center justify-around border-t border-slate-200 dark:border-slate-800 py-1.5 px-2 bg-slate-50 dark:bg-slate-900/90">
+      <div className="md:hidden flex items-center justify-around border-t border-header-line dark:border-slate-800 py-1.5 px-2 bg-surface-2 dark:bg-slate-900/90">
         <button
           onClick={() => onSelectTab('pipeline')}
           className={`px-3 py-1 text-xs font-medium rounded ${

@@ -226,7 +226,7 @@ export const InterviewPrepView: React.FC<InterviewPrepViewProps> = ({
                     value={newStoryTitle}
                     onChange={(e) => setNewStoryTitle(e.target.value)}
                     placeholder="e.g. Debugged production payment timeout"
-                    className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
+                    className="w-full px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
                   />
                 </div>
                 <div>
@@ -236,7 +236,7 @@ export const InterviewPrepView: React.FC<InterviewPrepViewProps> = ({
                     value={newCompetency}
                     onChange={(e) => setNewCompetency(e.target.value)}
                     placeholder="e.g. Conflict Resolution, System Optimization"
-                    className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
+                    className="w-full px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
                   />
                 </div>
               </div>
@@ -248,7 +248,7 @@ export const InterviewPrepView: React.FC<InterviewPrepViewProps> = ({
                   value={newSituation}
                   onChange={(e) => setNewSituation(e.target.value)}
                   placeholder="What was the initial problem, challenge, or team setup?"
-                  className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
+                  className="w-full px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
                 />
               </div>
 
@@ -259,7 +259,7 @@ export const InterviewPrepView: React.FC<InterviewPrepViewProps> = ({
                   value={newTask}
                   onChange={(e) => setNewTask(e.target.value)}
                   placeholder="What needed to be done, and what was your specific role?"
-                  className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
+                  className="w-full px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
                 />
               </div>
 
@@ -270,7 +270,7 @@ export const InterviewPrepView: React.FC<InterviewPrepViewProps> = ({
                   value={newAction}
                   onChange={(e) => setNewAction(e.target.value)}
                   placeholder="Which tools, decisions, or architectures did you implement?"
-                  className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
+                  className="w-full px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
                 />
               </div>
 
@@ -281,7 +281,7 @@ export const InterviewPrepView: React.FC<InterviewPrepViewProps> = ({
                   value={newResult}
                   onChange={(e) => setNewResult(e.target.value)}
                   placeholder="e.g. Reduced latency 40%, landed $50k deal, zero downtime"
-                  className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
+                  className="w-full px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100"
                 />
               </div>
 

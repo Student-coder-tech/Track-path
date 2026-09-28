@@ -67,7 +67,7 @@ export const PipelineTable: React.FC<PipelineTableProps> = ({
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse text-xs">
           <thead>
-            <tr className="bg-slate-50/80 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider text-[11px]">
+            <tr className="bg-surface-2/80 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-ink-2 dark:text-slate-400 font-semibold uppercase tracking-wider text-[11px]">
               <th className="py-3 px-4">Company & Role</th>
               <th className="py-3 px-4">Status</th>
               <th className="py-3 px-4">Type & Model</th>
@@ -78,7 +78,7 @@ export const PipelineTable: React.FC<PipelineTableProps> = ({
               <th className="py-3 px-4 text-right">Actions</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+          <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
             {applications.map((app) => (
               <tr
                 key={app.id}

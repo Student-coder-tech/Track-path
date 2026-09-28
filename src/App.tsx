@@ -248,7 +248,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col font-sans text-slate-900 dark:text-slate-100 transition-colors duration-150">
+    <div className="min-h-screen bg-page dark:bg-slate-950 flex flex-col font-sans text-ink dark:text-slate-100 transition-colors duration-150">
       
       {/* 1. Header Navigation Bar */}
       <TopNav
@@ -277,7 +277,7 @@ export default function App() {
             </div>
             <button
               onClick={fetchData}
-              className="px-3 py-1 bg-white dark:bg-slate-800 hover:bg-rose-100 dark:hover:bg-slate-700 rounded-lg text-rose-800 dark:text-rose-200 font-semibold border border-rose-200 dark:border-rose-700"
+              className="px-3 py-1 bg-input dark:bg-slate-800 hover:bg-rose-100 dark:hover:bg-slate-700 rounded-lg text-rose-800 dark:text-rose-200 font-semibold border border-rose-200 dark:border-rose-700"
             >
               Retry
             </button>
@@ -293,18 +293,18 @@ export default function App() {
               
               {/* Left: Search input */}
               <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
+                <Search className="absolute left-3 top-2.5 w-4 h-4 text-ink-muted" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search by company, role, location, or tags..."
-                  className="w-full pl-9 pr-4 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:bg-white dark:focus:bg-slate-800"
+                  className="w-full pl-9 pr-4 py-1.5 text-xs bg-input dark:bg-slate-800 border border-input-line dark:border-slate-700 rounded-xl text-ink dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand focus:bg-white dark:focus:bg-slate-800"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery('')}
-                    className="absolute right-2.5 top-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs"
+                    className="absolute right-2.5 top-2 text-ink-muted hover:text-ink-2 dark:hover:text-slate-200 text-xs"
                   >
                     ×
                   </button>
@@ -318,7 +318,7 @@ export default function App() {
                 <select
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
-                  className="px-2.5 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 font-medium focus:outline-none"
+                  className="px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-input-line dark:border-slate-700 rounded-lg text-ink-2 dark:text-slate-200 font-medium focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand"
                 >
                   <option value="All">All Stages</option>
                   <option value="Wishlist">Wishlist</option>
@@ -336,7 +336,7 @@ export default function App() {
                 <select
                   value={typeFilter}
                   onChange={(e) => setTypeFilter(e.target.value)}
-                  className="px-2.5 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 font-medium focus:outline-none"
+                  className="px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-input-line dark:border-slate-700 rounded-lg text-ink-2 dark:text-slate-200 font-medium focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand"
                 >
                   <option value="All">All Types</option>
                   <option value="Internship">Internship</option>
@@ -349,7 +349,7 @@ export default function App() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-2.5 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 font-medium focus:outline-none"
+                  className="px-2.5 py-1.5 bg-input dark:bg-slate-800 border border-input-line dark:border-slate-700 rounded-lg text-ink-2 dark:text-slate-200 font-medium focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand"
                 >
                   <option value="appliedDate">Sort: Newest Applied</option>
                   <option value="deadline">Sort: Deadline</option>
