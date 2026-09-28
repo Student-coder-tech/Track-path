@@ -44,3 +44,69 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   background: #475569;
 }
 
+/* Splash / image-loading screen.
+   Reused from the provided snippet, scoped under .splash-screen so existing
+   app layout and styles are left untouched. */
+.splash-screen,
+.splash-screen * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a0305; /* Deep luxury backdrop matching the image */
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.splash-screen.is-exiting {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-screen .stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+/* Subtle fade-in and scale-up animation */
+.splash-screen .animated-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+  /* Animation parameters: 1.5s with decelerating cubic-bezier for a clean, executive feel */
+  animation: fadeInScale 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-screen {
+    transition-duration: 0.01ms;
+  }
+  .splash-screen .animated-image {
+    animation-duration: 0.01ms;
+  }
+}
+
